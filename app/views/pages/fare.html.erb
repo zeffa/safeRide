@@ -1,0 +1,35 @@
+<div>
+    <div class="panel panel-default">
+        <div class="panel-body" align = "left">
+            <div class="row">
+                <div class="col-xs-6 col-md-4" style="border-right: 1px solid #ccc">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation"><%= link_to "Home", root_path %></li>
+                        <li role="presentation"><a href="#">About</a></li>
+                        <li role="presentation" class="active"><%= link_to "Check fare info", fare_path %></li>
+                        <li role="presentation"><a href="#">Report matatu</a></li>
+                        <li role="presentation"><a href="#">Directions</a></li>
+                        <!--<li role="presentation"><a href="#">Feedback</a></li>-->
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-8" id="contents"  style="border-left: 1px solid #ccc">
+                    <select name="routes" class="form-control" title="[**Select route**]">
+                        <option value="black">Black</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="orange">Orange</option>
+                        <option value="red">Red</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="white">White</option>
+                    </select><br/>
+                    <input type="text" class="form-control" placeholder="From"><br/>
+                    <input type="text" class="form-control" placeholder="Destination"><br/>
+                    <div class="actions">
+                            <button type="submit" class="btn btn-success btn-lg btn-block">Ask</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

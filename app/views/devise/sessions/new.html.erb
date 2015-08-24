@@ -1,0 +1,34 @@
+<div  align = "center" >
+    <div class="panel panel-default" style="width: 400px">
+         <% if notice %>
+            <p class="alert alert-success" style=""><%= notice %></p>
+        <% end %>
+        <% if alert %>
+            <p class="alert alert-danger"  style=""><%= alert %></p>
+        <% end %>
+      <div class="panel-heading"  align = "left" style="width: 400px; background-color: #009688">
+            <h2 align="center">Log in</h2>
+      </div>
+      <div class="panel-body" align = "left" style="width: 400px">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-group">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+            <%= f.label :password %> &nbsp;<%= link_to "(Forgot your password?)", new_password_path(resource_name) %><br />
+            <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+        </div>
+        <% if devise_mapping.rememberable? -%>
+            <div class="form-group">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+        <% end -%>
+        <div class="actions">
+            <%= f.submit "Log in", class: 'btn btn-lg btn-success btn-block' %>
+        </div>
+          <% end %>
+      </div>
+    </div>
+</div>
