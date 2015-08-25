@@ -51,12 +51,19 @@
                     <input type="text" class="form-control" placeholder="From"><br/>
                     <input type="text" class="form-control" placeholder="Destination"><br/>
                     <div class="input-group bootstrap-timepicker timepicker">
-                        <input id="timepicker1" type="text" class="form-control input-small" placeholder="pick start time">
+                        <input id="timepicker" type="text" class="form-control input-small" placeholder="pick start time">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                    </div>
+                    </div><br/>
+                    <div class="input-group bootstrap-timepicker timepicker">
+                        <input id="timepicker2" type="text" class="form-control input-small" placeholder="pick end time">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                    </div><br/>
 
                     <script type="text/javascript">
-                        $('#timepicker1').timepicker();
+                        $(function() {
+                        $('#timepicker').timepicker();
+                        $('#timepicker2').timepicker();
+                      });
                     </script>
                     <input type="text" class="form-control" placeholder="Enter amount as fare"><br/>
                     <div class="actions">
